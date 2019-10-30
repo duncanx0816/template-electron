@@ -32,6 +32,18 @@ let rendererConfig = {
   module: {
     rules: [
       {
+        test: /\.pug$/,
+        loader: 'pug-plain-loader'
+      },
+      {
+        test: /\.styl(us)?$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'stylus-loader'
+        ]
+      },
+      {
         test: /\.scss$/,
         use: ['vue-style-loader', 'css-loader', 'sass-loader']
       },
