@@ -19,17 +19,6 @@ let webConfig = {
   module: {
     rules: [
       {
-        test: /\.(js|vue)$/,
-        enforce: 'pre',
-        exclude: /node_modules/,
-        use: {
-          loader: 'eslint-loader',
-          options: {
-            formatter: require('eslint-friendly-formatter')
-          }
-        }
-      },
-      {
         test: /\.scss$/,
         use: ['vue-style-loader', 'css-loader', 'sass-loader']
       },
@@ -46,8 +35,20 @@ let webConfig = {
         use: ['vue-style-loader', 'css-loader']
       },
       {
+        test: /\.styl(us)?$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'stylus-loader'
+        ]
+      },
+      {
         test: /\.html$/,
         use: 'vue-html-loader'
+      },
+      {
+        test: /\.pug$/,
+        loader: 'pug-plain-loader'
       },
       {
         test: /\.js$/,

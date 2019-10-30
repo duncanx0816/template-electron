@@ -4,9 +4,9 @@
     <main>
       <div class="left-side">
         <span class="title">
-          Welcome to your project!
+          Welcome to your new project!
         </span>
-        <system-information>debug</system-information>
+        <system-information></system-information>
       </div>
 
       <div class="right-side">

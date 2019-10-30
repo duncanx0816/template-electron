@@ -1,5 +1,3 @@
-'use strict'
-
 import { app, BrowserWindow } from 'electron'
 
 /**
@@ -22,7 +20,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     height: 563,
     useContentSize: true,
-    width: 800,
+    width: 1000,
     webPreferences: {
       nodeIntegration: true,
       nodeIntegrationInWorker: true
